@@ -1,0 +1,40 @@
+[package]
+name = "mod-loader"
+description = "A frontend mod manager for Thunderstore."
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "mod-loader" 
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mod-loader_gui.workspace = true
+
+tracing-subscriber.workspace = true
+
+[dev-dependencies]
+console-subscriber = "0.4"
+
+[workspace]
+members = [ "gui" ]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Redhawk18"]
+license = "MPL-2.0"
+
+[workspace.dependencies]
+mod-loader_gui = { path = "gui" }
+
+dirs = "5"
+iced = { version = "0.13", features = ["advanced", "tokio"] }
+iced_aw = { version = "0.11", features = [ "tab_bar"], default-features = false }
+snafu = "0.8"
+tokio = { version = "1", features = ["fs", "process", "tracing"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }

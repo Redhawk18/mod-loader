@@ -1,0 +1,16 @@
+[package]
+name = "mod-loader_gui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dirs.workspace = true
+iced.workspace = true
+iced_aw.workspace = true
+snafu.workspace = true
+tokio.workspace = true
+tracing.workspace = true
