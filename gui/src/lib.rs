@@ -1,15 +1,13 @@
-pub mod game;
 pub mod screens;
 
-use game::Game;
 use iced::{Element, Task};
 use screens::{
-    profile::{self, Profile},
+    profile::{self},
     selection::{self},
 };
 use tracing::debug;
 
-const BINARY_NAME: &str = "mod-loader";
+use mod_loader_loader::{game::Game, profile::Profile};
 
 pub fn run() -> iced::Result {
     iced::application("mod-loader", App::update, App::view).run_with(App::new)
@@ -67,7 +65,7 @@ impl App {
                 profile::Message::Import => todo!(),
                 profile::Message::Update => todo!(),
                 profile::Message::Delete => todo!(),
-                profile::Message::SelectProfile(_) => todo!(),
+                profile::Message::SelectProfile(profile) => self.profile = Some(profile),
             },
         }
 

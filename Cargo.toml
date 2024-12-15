@@ -13,6 +13,8 @@ name = "mod-loader"
 
 [dependencies]
 mod-loader_gui.workspace = true
+mod-loader_loader.workspace = true
+mod-loader_thunderstore.workspace = true
 
 tracing-subscriber.workspace = true
 
@@ -20,7 +22,7 @@ tracing-subscriber.workspace = true
 console-subscriber = "0.4"
 
 [workspace]
-members = [ "gui" ]
+members = [ "gui" , "loader", "thunderstore"]
 
 [workspace.package]
 version = "0.1.0"
@@ -30,6 +32,8 @@ license = "MPL-2.0"
 
 [workspace.dependencies]
 mod-loader_gui = { path = "gui" }
+mod-loader_loader = { path = "loader" }
+mod-loader_thunderstore = { path = "thunderstore" }
 
 dirs = "5"
 iced = { version = "0.13", features = ["advanced", "tokio"] }
@@ -38,3 +42,4 @@ snafu = "0.8"
 tokio = { version = "1", features = ["fs", "process", "tracing"] }
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+thunderstore = "0.2"

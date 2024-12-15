@@ -8,7 +8,9 @@ license.workspace = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dirs.workspace = true
+mod-loader_loader.workspace = true
+mod-loader_thunderstore.workspace = true
+
 iced.workspace = true
 iced_aw.workspace = true
 snafu.workspace = true

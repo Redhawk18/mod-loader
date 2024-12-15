@@ -1,0 +1,10 @@
+[package]
+name = "mod-loader_loader"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+dirs.workspace = true
+tracing.workspace = true
